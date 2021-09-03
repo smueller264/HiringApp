@@ -6,7 +6,7 @@ import 'provider/home_screen_provider.dart';
 import 'pages/jobs_page.dart';
 import 'pages/welcome_page.dart';
 import 'widgets/home_tile.dart';
-import 'widgets/page_view_headline_text.dart';
+import 'widgets/page_view_headline_text_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -23,11 +23,11 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    PageViewHeadlineText(
+                    PageViewHeadlineTextButton(
                       headline: "Willkommen",
                       index: 0,
                     ),
-                    PageViewHeadlineText(
+                    PageViewHeadlineTextButton(
                       headline: "Jobs",
                       index: 1,
                     ),

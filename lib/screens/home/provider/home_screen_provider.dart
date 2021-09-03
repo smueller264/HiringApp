@@ -9,6 +9,8 @@ class HomeScreenProvider with ChangeNotifier {
   int _currentPageIndex = 0;
   final int pageCount = 2;
 
+  bool isActive(index) => _currentPageIndex == index;
+
   ///Returns the currentPageIndex from the [PageController]
   int get currentPageIndex => _currentPageIndex;
 
