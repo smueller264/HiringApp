@@ -26,6 +26,7 @@ class HomeScreenProvider with ChangeNotifier {
     }
   }
 
+  ///Updates the [currentPageIndex]
   void onScroll(int newIndex) {
     _currentPageIndex = newIndex;
     notifyListeners();
