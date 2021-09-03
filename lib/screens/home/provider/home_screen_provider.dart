@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 class HomeScreenProvider with ChangeNotifier {
   //PageController for HomeScreen PageView
-  final PageController pageController = PageController();
+  final PageController pageController = PageController(initialPage: 0);
 
   int _currentPageIndex = 0;
   final int pageCount = 2;
@@ -14,6 +14,7 @@ class HomeScreenProvider with ChangeNotifier {
 
   ///Sets new PageIndex and animates to new Page
   set currentPageIndex(int newIndex) {
+    print("setcurrentindex");
     if (newIndex != _currentPageIndex) {
       _currentPageIndex = newIndex;
       notifyListeners();
@@ -23,5 +24,10 @@ class HomeScreenProvider with ChangeNotifier {
         curve: Curves.easeInOut,
       );
     }
+  }
+
+  void onScroll(int newIndex) {
+    _currentPageIndex = newIndex;
+    notifyListeners();
   }
 }

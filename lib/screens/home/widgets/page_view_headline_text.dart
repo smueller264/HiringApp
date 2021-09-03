@@ -14,15 +14,14 @@ class PageViewHeadlineText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text(
-        headline,
-        style: GoogleFonts.roboto(
-          textStyle: TextStyle(
-            color: context.watch<HomeScreenProvider>().currentPageIndex == index
-                ? Colors.black
-                : Colors.green,
-          ),
+    return Text(
+      headline,
+      style: GoogleFonts.roboto(
+        textStyle: TextStyle(
+          fontSize: 22,
+          color: context.watch<HomeScreenProvider>().currentPageIndex == index
+              ? Colors.green
+              : Colors.black,
         ),
       ),
     );
