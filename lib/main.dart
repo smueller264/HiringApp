@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:provider/provider.dart';
+
+import 'screens/home/home_screen.dart';
+import 'screens/home/provider/home_screen_provider.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -12,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: null,
+      home: ChangeNotifierProvider<HomeScreenProvider>(
+        child: HomeScreen(),
+        create: (context) => HomeScreenProvider(),
+      ),
     );
   }
 }
