@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'components/job_screen_header.dart';
+
 class JobScreen extends StatelessWidget {
   const JobScreen({Key? key}) : super(key: key);
 
@@ -11,8 +13,7 @@ class JobScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          Text("hallo"),
-          Text("hallo"),
+          JobScreenHeader(),
         ],
       ),
     ));
