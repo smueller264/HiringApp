@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'components/job_screen_header.dart';
+import 'components/job_facts.dart';
 
 class JobScreen extends StatelessWidget {
   const JobScreen({Key? key}) : super(key: key);
@@ -10,11 +11,12 @@ class JobScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade50,
+      backgroundColor: Colors.green,
       body: SingleChildScrollView(
         child: Column(
           children: [
             JobScreenHeader(),
+            JobFacts(),
           ],
         ),
       ),
