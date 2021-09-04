@@ -4,8 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class JobTileBottomText extends StatelessWidget {
   const JobTileBottomText({
+    required this.text,
     Key? key,
   }) : super(key: key);
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class JobTileBottomText extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Text("Remote"),
+        child: Text(text),
       ),
     );
   }

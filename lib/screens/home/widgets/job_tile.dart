@@ -4,9 +4,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../themes/device_size.dart';
 import 'package:hiringapp/screens/home/widgets/job_tile_bottom_text.dart';
+import '../../../models/job.dart';
 
 class JobTile extends StatelessWidget {
-  const JobTile({Key? key}) : super(key: key);
+  const JobTile({
+    Key? key,
+    required this.job,
+  }) : super(key: key);
+
+  final Job job;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +49,7 @@ class JobTile extends StatelessWidget {
                 title: Padding(
                   padding: const EdgeInsets.only(top: 12.0, bottom: 3),
                   child: Text(
-                    "Business Analyst",
+                    job.description,
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                           color: Colors.black, letterSpacing: .5, fontSize: 20),
@@ -51,7 +57,7 @@ class JobTile extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  "Digital Transformation Center",
+                  job.department,
                   style: GoogleFonts.roboto(
                     textStyle: TextStyle(
                         color: Colors.black, letterSpacing: .5, fontSize: 16),
@@ -62,8 +68,10 @@ class JobTile extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    JobTileBottomText(),
-                    JobTileBottomText(),
+                    JobTileBottomText(
+                      text: job.type,
+                    ),
+                    JobTileBottomText(text: job.place),
                   ],
                 ),
               ),
