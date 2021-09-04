@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../themes/device_size.dart';
+
 class HomeTile extends StatelessWidget {
   const HomeTile({Key? key}) : super(key: key);
 
@@ -10,9 +12,8 @@ class HomeTile extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(bottom: 50),
         child: Container(
-          //TODO: Refactor MediaQuery into DeviceSize Class: https://medium.com/flutterdevs/layoutbuilder-widget-in-flutter-d70d54b72a81
-          width: MediaQuery.of(context).size.width * 0.8,
-          height: MediaQuery.of(context).size.height * 0.35,
+          width: DeviceSize.width(context) * 0.8,
+          height: DeviceSize.height(context) * 0.35,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
