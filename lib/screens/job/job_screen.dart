@@ -10,12 +10,14 @@ class JobScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        children: [
-          JobScreenHeader(),
-        ],
+      backgroundColor: Colors.blueGrey.shade50,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            JobScreenHeader(),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

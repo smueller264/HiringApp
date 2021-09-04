@@ -10,7 +10,8 @@ class JobScreenHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 20),
+      color: Colors.white,
+      padding: const EdgeInsets.only(left: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -58,6 +59,7 @@ class JobScreenHeader extends StatelessWidget {
           ),
           Container(
             child: JobApplyButton(),
+            margin: EdgeInsets.only(bottom: 20),
           ),
         ],
       ),
