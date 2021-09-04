@@ -8,9 +8,13 @@ class JobScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("Job Page"),
+        body: SingleChildScrollView(
+      child: Column(
+        children: [
+          Text("hallo"),
+          Text("hallo"),
+        ],
       ),
-    );
+    ));
   }
 }
