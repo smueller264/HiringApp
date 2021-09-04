@@ -14,19 +14,22 @@ class PageViewHeadlineTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () =>
-          context.read<HomeScreenProvider>().currentPageIndex = index,
-      child: AnimatedOpacity(
-        opacity:
-            context.watch<HomeScreenProvider>().isActive(index) ? 1.0 : 0.3,
-        duration: const Duration(milliseconds: 100),
-        child: Text(
-          headline,
-          style: GoogleFonts.roboto(
-            textStyle: TextStyle(
-              fontSize: 22,
-              color: Colors.black,
+    return Container(
+      padding: EdgeInsets.only(top: 100),
+      child: TextButton(
+        onPressed: () =>
+            context.read<HomeScreenProvider>().currentPageIndex = index,
+        child: AnimatedOpacity(
+          opacity:
+              context.watch<HomeScreenProvider>().isActive(index) ? 1.0 : 0.3,
+          duration: const Duration(milliseconds: 100),
+          child: Text(
+            headline,
+            style: GoogleFonts.roboto(
+              textStyle: TextStyle(
+                fontSize: 26,
+                color: Colors.black,
+              ),
             ),
           ),
         ),

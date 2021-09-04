@@ -17,9 +17,9 @@ class HomeScreen extends StatelessWidget {
       body: Consumer<HomeScreenProvider>(
         builder: (context, homeScreenProvider, child) {
           return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
+                flex: 0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -34,14 +34,13 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Flexible(
-                fit: FlexFit.loose,
+              Expanded(
                 child: PageView(
                   onPageChanged: (newIndex) =>
                       homeScreenProvider.onScroll(newIndex),
                   children: [
-                    JobsPage(),
                     WelcomePage(),
+                    JobsPage(),
                   ],
                   controller: homeScreenProvider.pageController,
                 ),
