@@ -7,8 +7,12 @@ class WelcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: HomeTile(),
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return HomeTile();
+      },
     );
   }
 }
