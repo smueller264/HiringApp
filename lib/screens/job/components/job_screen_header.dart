@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
+import '../widgets/job_apply_button.dart';
+
 class JobScreenHeader extends StatelessWidget {
   const JobScreenHeader({Key? key}) : super(key: key);
 
@@ -49,10 +51,13 @@ class JobScreenHeader extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 10),
+            margin: EdgeInsets.only(bottom: 20),
             child: Text(
               "Veröffentlicht am 20. Juli",
             ),
+          ),
+          Container(
+            child: JobApplyButton(),
           ),
         ],
       ),
