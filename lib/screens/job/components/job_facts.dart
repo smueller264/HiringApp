@@ -18,8 +18,14 @@ class JobFacts extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                JobFactTile(header: "Bewerben bis"),
-                JobFactTile(header: "Gehalt"),
+                JobFactTile(
+                  header: "BEWERBEN BIS",
+                  text: "30. Juli 2021",
+                ),
+                JobFactTile(
+                  header: "GEHALT",
+                  text: "\$100k - \$120k/yearly",
+                ),
               ],
             ),
           ),
@@ -28,8 +34,15 @@ class JobFacts extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                JobFactTile(header: "Job Nature"),
-                JobFactTile(header: "Job Location"),
+                JobFactTile(
+                  header: "JOB NATURE",
+                  text: "Vollzeit",
+                  showAsJobType: true,
+                ),
+                JobFactTile(
+                  header: "JOB LOCATION",
+                  text: "Remote",
+                ),
               ],
             ),
           )

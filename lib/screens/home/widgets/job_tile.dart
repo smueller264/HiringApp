@@ -75,8 +75,20 @@ class JobTile extends StatelessWidget {
                     children: [
                       JobTileBottomText(
                         text: job.type,
+                        height: 25,
+                        width: 70,
+                        margin: EdgeInsets.only(
+                          left: 20,
+                        ),
                       ),
-                      JobTileBottomText(text: job.place),
+                      JobTileBottomText(
+                        text: job.place,
+                        height: 25,
+                        width: 70,
+                        margin: EdgeInsets.only(
+                          left: 20,
+                        ),
+                      ),
                     ],
                   ),
                 ),
