@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../constants/strings.dart';
-
-class JobDescription extends StatelessWidget {
-  const JobDescription({Key? key}) : super(key: key);
+class JobRoles extends StatelessWidget {
+  const JobRoles({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
       color: Colors.white,
       padding: const EdgeInsets.only(
         left: 20,
@@ -17,14 +16,11 @@ class JobDescription extends StatelessWidget {
         top: 15,
         right: 20,
       ),
-      margin: const EdgeInsets.only(
-        bottom: 20,
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "JOB BESCHREIBUNG",
+            "ROLES AND RESPONSIBILITIES",
             style: GoogleFonts.roboto(
                 textStyle: TextStyle(
                   color: Colors.black,
@@ -36,10 +32,19 @@ class JobDescription extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            Strings.exampleDescription(),
-            style: TextStyle(height: 1.3),
-          )
+          Text("- Role 1"),
+          SizedBox(
+            height: 1,
+          ),
+          Text("- Role 2"),
+          SizedBox(
+            height: 1,
+          ),
+          Text("- Role 3"),
+          SizedBox(
+            height: 1,
+          ),
+          Text("- Role 4"),
         ],
       ),
     );
