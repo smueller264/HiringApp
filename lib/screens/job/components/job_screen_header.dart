@@ -12,7 +12,7 @@ class JobScreenHeader extends StatelessWidget {
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(left: 20, bottom: 20),
-      margin: const EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

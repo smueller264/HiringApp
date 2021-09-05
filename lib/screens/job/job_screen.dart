@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'components/job_screen_header.dart';
 import 'components/job_facts.dart';
+import 'components/job_description.dart';
 
 class JobScreen extends StatelessWidget {
   const JobScreen({Key? key}) : super(key: key);
@@ -14,9 +15,11 @@ class JobScreen extends StatelessWidget {
       backgroundColor: Colors.grey,
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             JobScreenHeader(),
             JobFacts(),
+            JobDescription(),
           ],
         ),
       ),

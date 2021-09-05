@@ -32,6 +32,7 @@ class JobFactTile extends StatelessWidget {
             style: GoogleFonts.roboto(
               textStyle: TextStyle(
                 color: Colors.black,
+                fontWeight: FontWeight.w600,
               ),
               fontSize: 13,
               letterSpacing: 0.4,
