@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/home/home_screen.dart';
+import 'screens/job/job_screen.dart';
 import 'screens/home/provider/home_screen_provider.dart';
 
 void main() {
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         child: HomeScreen(),
         create: (context) => HomeScreenProvider(),
       ),
+      routes: {
+        JobScreen.routeName: (context) => JobScreen(),
+      },
     );
   }
 }
