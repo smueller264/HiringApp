@@ -22,12 +22,13 @@ class JobRoles extends StatelessWidget {
           Text(
             "ROLES AND RESPONSIBILITIES",
             style: GoogleFonts.roboto(
-                textStyle: TextStyle(
-                  color: Colors.black,
-                ),
-                fontSize: 13,
-                letterSpacing: 0.4,
-                fontWeight: FontWeight.w600),
+              textStyle: TextStyle(
+                color: Colors.black,
+              ),
+              fontSize: 13,
+              letterSpacing: 0.4,
+              fontWeight: FontWeight.w600,
+            ),
           ),
           SizedBox(
             height: 20,
