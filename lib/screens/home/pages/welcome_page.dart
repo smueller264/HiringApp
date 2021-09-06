@@ -11,7 +11,9 @@ class WelcomePage extends StatelessWidget {
       shrinkWrap: true,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return HomeTile();
+        return HomeTile(
+          tag: index,
+        );
       },
     );
   }

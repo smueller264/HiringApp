@@ -10,6 +10,7 @@ class ArticleScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tag = ModalRoute.of(context)!.settings.arguments!;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -17,13 +18,16 @@ class ArticleScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              margin: EdgeInsets.only(bottom: 20),
-              height: DeviceSize.height(context) * 0.35,
-              decoration: BoxDecoration(
-                color: Color.fromRGBO(128, 102, 255, 1),
+            Hero(
+              tag: tag,
+              child: Container(
+                margin: EdgeInsets.only(bottom: 20),
+                height: DeviceSize.height(context) * 0.35,
+                decoration: BoxDecoration(
+                  color: Color.fromRGBO(128, 102, 255, 1),
+                ),
+                child: Image.asset("assets/images/dxc1.png"),
               ),
-              child: Image.asset("assets/images/dxc1.png"),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
