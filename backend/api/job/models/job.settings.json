@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "name": "Job"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true,
+      "default": "DXC"
+    },
+    "releaseDate": {
+      "type": "date",
+      "required": true
+    },
+    "applyUntilDate": {
+      "type": "date",
+      "required": true
+    },
+    "nature": {
+      "type": "enumeration",
+      "enum": [
+        "fulltime",
+        "partTime",
+        "flexible"
+      ],
+      "required": true
+    },
+    "minimumSalary": {
+      "type": "integer"
+    },
+    "maximumSalary": {
+      "type": "integer",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "rolesAndresponsibilites": {
+      "type": "richtext",
+      "required": true
+    },
+    "uid": {
+      "type": "uid"
+    }
+  }
+}
