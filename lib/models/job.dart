@@ -1,20 +1,14 @@
 import 'strapi_model.dart';
 
-enum JobNature {
-  fulltime,
-  partTime,
-  flexible,
-}
-
 class Job extends StrapiModel {
   final int id;
   final String title;
   final String company;
-  final DateTime releaseDate;
-  final DateTime applyUntilDate;
-  final JobNature jobNature;
-  final int minimumSalary;
-  final int maximumSalary;
+  final String releaseDate; //DateTime
+  final String applyUntilDate; //DateTime
+  final String jobNature; //JobNature
+  final int minimumSalary; //int
+  final int maximumSalary; //int
   final String location;
   final String description;
   final String rolesAndResponsibilities;
@@ -41,11 +35,11 @@ class Job extends StrapiModel {
           company: json["company"],
           releaseDate: json["releaseDate"],
           applyUntilDate: json["applyUntilDate"],
-          jobNature: json["jobNature"],
+          jobNature: json["nature"],
           minimumSalary: json["minimumSalary"],
           maximumSalary: json["maximumSalary"],
           location: json["location"],
           description: json["description"],
-          rolesAndResponsibilities: json["rolesAndResponsibilites"],
+          rolesAndResponsibilities: json["rolesAndresponsibilites"],
         );
 }
