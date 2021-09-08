@@ -7,12 +7,6 @@ import '../../../models/job.dart';
 class JobsPage extends StatelessWidget {
   JobsPage({Key? key}) : super(key: key);
 
-  final Job exampleJob = Job(
-      department: "Digital Transformation Center",
-      description: "Business Analyst",
-      place: "Potsdam",
-      type: "Remote");
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
