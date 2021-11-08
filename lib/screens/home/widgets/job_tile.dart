@@ -52,7 +52,7 @@ class JobTile extends StatelessWidget {
                   title: Padding(
                     padding: const EdgeInsets.only(top: 12.0, bottom: 3),
                     child: Text(
-                      job.description,
+                      job.title,
                       style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                             color: Colors.black,
@@ -62,7 +62,7 @@ class JobTile extends StatelessWidget {
                     ),
                   ),
                   subtitle: Text(
-                    job.department,
+                    job.company,
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                           color: Colors.black, letterSpacing: .5, fontSize: 16),
@@ -74,7 +74,7 @@ class JobTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       JobTileBottomText(
-                        text: job.type,
+                        text: job.jobNature.toString(),
                         height: 25,
                         width: 70,
                         margin: EdgeInsets.only(
@@ -82,7 +82,7 @@ class JobTile extends StatelessWidget {
                         ),
                       ),
                       JobTileBottomText(
-                        text: job.place,
+                        text: job.location,
                         height: 25,
                         width: 70,
                         margin: EdgeInsets.only(

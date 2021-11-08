@@ -6,6 +6,7 @@ import 'screens/home/home_screen.dart';
 import 'screens/home/provider/home_screen_provider.dart';
 import 'screens/job/job_screen.dart';
 import 'screens/article/article_screen.dart';
+import 'screens/home/provider/jobs_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,9 +20,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ChangeNotifierProvider<HomeScreenProvider>(
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider<HomeScreenProvider>(
+            create: (context) => HomeScreenProvider(),
+          ),
+          ChangeNotifierProvider<JobsProvider>(
+            create: (context) => JobsProvider(),
+          )
+        ],
         child: HomeScreen(),
-        create: (context) => HomeScreenProvider(),
       ),
       routes: {
         JobScreen.routeName: (context) => JobScreen(),
