@@ -8,6 +8,7 @@ class MarkdownService {
   static final instance = MarkdownService._();
 
   Future<String> getAsset(BuildContext context, String assetName) async {
-    return DefaultAssetBundle.of(context).loadString('assets/$assetName.md');
+    return DefaultAssetBundle.of(context)
+        .loadString('assets/content/$assetName.md');
   }
 }

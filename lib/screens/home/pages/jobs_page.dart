@@ -21,13 +21,19 @@ class JobsPage extends StatelessWidget {
             future: provider.jobs,
             builder: (context, AsyncSnapshot<List<Job>> snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                return ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: snapshot.data!.length,
-                  itemBuilder: (context, index) {
-                    return JobTile(job: snapshot.data![index]);
-                  },
-                );
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) {
+                      return JobTile(job: snapshot.data![index]);
+                    },
+                  );
+                } else {
+                  return Center(
+                    child: Text("No Data"),
+                  );
+                }
               } else {
                 return (CircularProgressIndicator());
               }
