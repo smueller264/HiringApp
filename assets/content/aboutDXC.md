@@ -2,8 +2,6 @@
 
 We use the power of technology to deliver mission critical IT services that move the world.
 
-#
-
 # Delivering eXcellence for our Customers and Colleagues
 
 DXC Technology is a Fortune 500 global IT services leader. Our more than 130,000 people in 70-plus countries are entrusted by our customers to deliver what matters most. We use the power of technology to deliver mission critical IT services across the Enterprise Technology Stack to drive business impact. DXC is an employer of choice with strong values, and fosters a culture of inclusion, belonging and corporate citizenship. We are DXC.
