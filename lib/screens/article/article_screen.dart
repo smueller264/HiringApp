@@ -63,38 +63,6 @@ class ArticleScreen extends StatelessWidget {
           ],
         ),
       ),
-      // child: Column(
-      //   crossAxisAlignment: CrossAxisAlignment.start,
-      //   mainAxisSize: MainAxisSize.min,
-      //   mainAxisAlignment: MainAxisAlignment.start,
-      //   children: [
-      //     Hero(
-      //       tag: tag,
-      //       child: Container(
-      //         margin: EdgeInsets.only(bottom: 20),
-      //         height: DeviceSize.height(context) * 0.35,
-      //         decoration: BoxDecoration(
-      //           color: Color.fromRGBO(128, 102, 255, 1),
-      //         ),
-      //         child: Image.asset("assets/images/dxc1.png"),
-      //       ),
-      //     ),
-
-      //       FutureBuilder(
-      //         future: MarkdownService.instance.getAsset(context, "aboutDXC"),
-      //         builder: (context, snapshot) {
-      //           if (snapshot.hasData) {
-      //             return Markdown(data: snapshot.data.toString());
-      //           } else {
-      //             return Center(
-      //               child: Text("noData"),
-      //             );
-      //           }
-      //         },
-      //       ),
-
-      //   ],
-      // ),
     );
   }
 }

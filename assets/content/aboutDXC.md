@@ -26,9 +26,7 @@ We leverage the power of partnerships through our curated [DXC ecosystem of tech
 
 Our [values](https://dxc.com/us/en/about-us/values) are the fabric of DXC. They bind us together regardless of where or how we work and position us to succeed on our transformation journey.
 
-![](RackMultipart20211111-4-14ofmbj_html_c238038c6c1a4606.jpg)
-
-##
+![](resource:assets/images/values.jpg)
 
 ## Join our team
 

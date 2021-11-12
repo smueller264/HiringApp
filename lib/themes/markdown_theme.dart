@@ -9,9 +9,7 @@ class MarkdownTheme {
       h1: GoogleFonts.roboto(
         fontSize: 25,
       ),
-      h2: GoogleFonts.roboto(
-        fontSize: 60,
-      ),
+      h2: GoogleFonts.roboto(fontSize: 40, fontWeight: FontWeight.bold),
       p: GoogleFonts.roboto(
         fontSize: 15,
       ));
