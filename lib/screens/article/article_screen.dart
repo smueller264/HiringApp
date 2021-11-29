@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../themes/device_size.dart';
-import '../../constants/strings.dart';
+import '../../themes/markdown_theme.dart';
+import '../../services/markdown_service.dart';
+
+import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ArticleScreen extends StatelessWidget {
   const ArticleScreen({Key? key}) : super(key: key);
@@ -12,11 +16,10 @@ class ArticleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final tag = ModalRoute.of(context)!.settings.arguments!;
     return Scaffold(
-      body: SingleChildScrollView(
+      body: //SingleChildScrollView(
+          SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Hero(
               tag: tag,
@@ -30,50 +33,31 @@ class ArticleScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text("DISCOVER DXC"),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 2, bottom: 10),
-              child: Text(
-                "Was ist DXC",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 20, top: 2, bottom: 30, right: 10),
-              child: Text(
-                Strings.exampleText1(),
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 20, top: 2, bottom: 30, right: 10),
-              child: Text(
-                Strings.exampleText1(),
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 20, top: 2, bottom: 30, right: 10),
-              child: Text(
-                Strings.exampleText1(),
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w300,
-                ),
+              child: FutureBuilder(
+                future: MarkdownService.instance.getAsset(context, "aboutDXC"),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return MarkdownBody(
+                      styleSheet: MarkdownTheme.markdownTheme,
+                      shrinkWrap: true,
+                      onTapLink: (
+                        text,
+                        href,
+                        title,
+                      ) {
+                        launch(href!);
+                      },
+                      data: snapshot.data.toString(),
+                    );
+                  } else {
+                    return Center(
+                      child: Text("noData"),
+                    );
+                  }
+                },
               ),
             ),
           ],
